@@ -1,0 +1,204 @@
+.slaide{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--main-color);
+        opacity: .30;
+    }
+    .contenr{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            flex: 1 1 50%;
+            // padding-left: 50px;
+            @include breakpoints(small){
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 200px;
+                padding: 0;
+            }
+            @include breakpoints(mobile){
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 150px;
+                padding: 0;
+                    }
+            .text{
+                @include breakpoints(media){
+                    margin-top: 135px;
+                }
+                h2{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 45px;
+                    line-height: 50px;
+                    color: #FFFFFF;
+                    @include breakpoints(media){
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                    @include breakpoints(mobile){
+                        font-size: 29px;
+                        line-height: 35px;
+                    }
+                }
+                p{
+                    margin-top: 30px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 19px;
+                    line-height: 25px;
+                    color: white;
+                    @include breakpoints(media){
+                        margin-top: 11px;
+                        font-size: 17px;
+                        line-height: 20px;
+                    }
+                    @include breakpoints(mobile){
+                        font-size: 17px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .dounlod{
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+                @include breakpoints(mobile){
+                    flex-direction: column;
+                }
+                @include breakpoints(media){
+                    flex-direction: column;
+                }
+                    #dounlode{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border: none;
+                        width: 200px;
+                        padding: 10px 30px;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                        cursor: pointer;
+                        transition: .4s;
+                        -webkit-transition: .4s;
+                        -moz-transition: .4s;
+                        -ms-transition: .4s;
+                        -o-transition: .4s;
+                        &:hover{
+                            box-shadow: 10px 10px 10px 0 rgb(0,0,10%);
+                        }
+                        @include breakpoints(mobile){
+                            margin-bottom: 20px;
+                        }
+                        @include breakpoints(media){
+                            margin-bottom: 20px;
+                        }
+                        }
+                        span{
+                            display: flex;
+                            align-items: center;
+                            color: #FFFFFF;
+                            font-weight: bold;
+                            &:hover  svg{
+                                animation-name: arow ;
+                                animation-duration: .8s;
+                                animation-timing-function: ease-in;
+                                animation-iteration-count: infinite;
+                            }
+
+                            svg{
+                                margin-left: 10px;
+                            }
+                        }
+            }
+
+        }
+        .right{
+            @include breakpoints(media){
+                margin-top: 70px;
+            }
+            @include breakpoints(small){
+                display: none;
+            }
+            @include breakpoints(mobile){
+                display: none;
+                    }
+            margin-top: 20px;
+            img{
+                margin-left: 50px;
+                @include breakpoints(media){
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .custom-shape-divider-bottom-1677533732 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-bottom-1677533732 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 186px;
+    }
+    
+    .custom-shape-divider-bottom-1677533732 .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+@keyframes  arow {
+    from{
+        transform: translateX(8px);
+        -webkit-transform: translateX(8px);
+        -moz-transform: translateX(8px);
+        -ms-transform: translateX(8px);
+        -o-transform: translateX(8px);
+}
+to{
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+    
+}
+// #dounlode span:hover + svg{
+//     animation-name: arow ;
+//     animation-duration:.5s;
+//     animation-timing-function:ease-in;
+    
+// }
