@@ -1,0 +1,99 @@
+.Portfolio{
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    .contenr{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .text{
+            max-width: 500px;
+            position: relative;
+            h2{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 40px;
+                text-align: center;
+                @include breakpoints(mobile){
+                    font-size: 20px;
+                    line-height: 20px;
+                        }
+}
+            p{
+                max-width: 600px;
+                margin-top: 20px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                text-align: center;
+                opacity: .8;
+            }
+        }
+        .section{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .img{
+                width: 90%;
+                img{
+                    width: 100%;
+                    // height: 100%;
+                }
+                @include breakpoints(media){
+                    width: 30%;
+                }
+                @include breakpoints(small){
+                    width: 50%;
+                }
+                @include breakpoints(mobile){
+                    width: 50%;
+                        }
+            }
+            #one{
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 74%;
+                    top: 5%;
+                    width: 487px;
+                    height: 451px;
+                    background-image: url("/assets/SVG/Path\ 35.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    z-index: -1;
+                    @include breakpoints(media){
+                        display: none;
+                    }
+                    @include breakpoints(small){
+                        display: none;
+                    }
+                    @include breakpoints(mobile){
+                        display: none;
+                            }
+                            @media (max-width:1291px) {
+                                display: none;
+                            }
+                }
+            }
+            @include breakpoints(media){
+                flex-wrap: wrap;
+            }
+            @include breakpoints(small){
+                flex-wrap: wrap;
+            }
+            @include breakpoints(mobile){
+                flex-wrap: wrap;
+                    }
+
+        }
+    }
+}
